@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>专属你的告白</title>
+  <style>
+    /* 全局样式 */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+    }
+
+    /* 首页样式 */
+   .home {
+      text-align: center;
+      position: relative;
+      min-height: 100vh;
+      background-image: url('豪华办公室背景图.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+   .home::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 215, 182, 0.6);
+    }
+
+   .home h1 {
+      font-size: 4em;
+      color: #333;
+      margin-top: 100px;
+      z-index: 1;
+    }
+
+   .home p {
+      font-size: 1.8em;
+      color: #666;
+      margin-top: 50px;
+      z-index: 1;
+    }
+
+   .home.love-button {
+      display: inline-block;
+      background-color: rgba(255, 140, 0, 0.8);
+      color: white;
+      padding: 20px 40px;
+      font-size: 1.5em;
+      border-radius: 50px;
+      text-decoration: none;
+      margin-top: 100px;
+      z-index: 1;
+      transition: all 0.3s ease;
+    }
+
+   .home.love-button:hover {
+      background-color: rgba(255, 140, 0, 1);
+      transform: scale(1.1);
+    }
+
+    /* 内页样式 */
+   .inner-page {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding: 50px;
+    }
+
+   .inner-page.left-column {
+      width: 40%;
+    }
+
+   .inner-page.left-column img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      transition: all 0.3s ease;
+    }
+
+   .inner-page.left-column img:hover {
+      transform: scale(1.05) rotate(5deg);
+    }
+
+   .inner-page.left-column.heart-hover {
+      position: relative;
+      display: inline-block;
+    }
+
+   .inner-page.left-column.heart-hover::after {
+      content: "你是我的唯一";
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(255, 140, 0, 0.8);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+   .inner-page.left-column.heart-hover:hover::after {
+      opacity: 1;
+    }
+
+   .inner-page.right-column {
+      width: 50%;
+      font-size: 1.5em;
+      line-height: 1.6;
+    }
+
+    /* 爱心特效样式 */
+   .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: rgba(255, 20, 147, 0.8);
+      border-radius: 50% 50% 0
